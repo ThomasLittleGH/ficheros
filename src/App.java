@@ -6,29 +6,29 @@ public class App {
         // @author Thomas Little
         // Definicion de variables
         Scanner input = new Scanner(System.in);
-        int opcion = 0;
+        String opcion = "0";
         do {
-            
-            System.out.println("Lector de textos 2077");
+            opcion = "0";
+            System.out.println("*** Menu ***");
             System.out.println("1) Ingresar datos \n2) Visualisar datos \n0) Salir");
-            opcion = input.nextInt();
-            input.skip("\n");
+            opcion = input.nextLine();
             
             switch (opcion) {
-                case 0:
+                case "0":
                     break;
-                case 1:
+                case "1":
                     guardarDatos();
                     break;
-                case 2:
+                case "2":
                     leerDatos();
                     break;
                 default: // Si el usuario no ingresa un dato valido el programa le avisa
                     System.out.println("Error 01 - seleccione un numero valido");
                     break;
             }
-        } while (opcion != 0);
+        } while (opcion != "0");
         
+        input.close();
     }
     public static void guardarDatos(){
         // Definicion de datos
@@ -37,6 +37,7 @@ public class App {
     }
     public static void leerDatos(){
         // Definicion de datos
-        lectura leer = new lectura();
+        lectura j = new lectura();
+        j.leer("datos.txt");
     }
 }

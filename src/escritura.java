@@ -9,7 +9,7 @@ public class escritura {
        try {
             // Definicion de variables
             // Se genera el objeto fisico del archivo con FileWriter y se usa BufferedWriter para trabajar con el fichero en el codigo
-            FileWriter fw = new FileWriter(nombreArchivo, true); 
+            FileWriter fw = new FileWriter(nombreArchivo, true); // true -> usa el fichero ya existente. false -> borra el fichero existente y crea una nuevo
             BufferedWriter archivoEscritura = new BufferedWriter(fw); 
             Scanner input = new Scanner(System.in);
             String codigo, nombre, fono;
@@ -22,14 +22,13 @@ public class escritura {
             System.out.println("Infrese fono: ");
             fono = input.nextLine();
 
-            // Guardar datos en el fichero
-            archivoEscritura.write("Fono: " + fono + ", Nombre: " + nombre + ", codigo: " + codigo + System.getProperty("line.separator"));
+            // Guardar datos en el fichero (se concatenan las palabras)
+            archivoEscritura.write(codigo + ", " + nombre + ", " + fono + System.getProperty("line.separator")); // line separator = \n
 
             // Cerrar los objetos
             archivoEscritura.close();
-            input.close();
-       } catch (Exception e) {
+        } catch (Exception e) {
            System.out.println("Error 02 - no se puede escribir el archivo");
-       }
+        }
    } 
 }

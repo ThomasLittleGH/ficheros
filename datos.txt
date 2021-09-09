@@ -1,1 +1,7 @@
-Fono: 56971572215, Nombre: Thomas, codigo: Pantera blanca
+001, Thomas, 2005
+002, Pedro, feo
+003, Ian, loco
+004, Alberto, fono
+005, Floppy, roca
+006, Warth, fon
+007, Marth, 56971572214
