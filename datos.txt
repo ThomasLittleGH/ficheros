@@ -5,3 +5,4 @@
 005, Floppy, roca
 006, Warth, fon
 007, Marth, 56971572214
+c o d i g o,n o m b r e,f o n o

@@ -23,7 +23,7 @@ public class lectura {
                 //traspaso a la variable linea de la lectura de la primera linea del fichero
                 while ((linea = archivoLectura.readLine()) != null) {
                     // Clase que permite reconocer el caracter que se utiliza de separador
-                    StringTokenizer token = new StringTokenizer(linea, " ,");
+                    StringTokenizer token = new StringTokenizer(linea, ",");
 
                     // traspasa hasta antes de la coma el caracter o string especificado
                     String codigo = token.nextToken().trim(),

@@ -23,7 +23,7 @@ public class escritura {
             fono = input.nextLine();
 
             // Guardar datos en el fichero (se concatenan las palabras)
-            archivoEscritura.write(codigo + ", " + nombre + ", " + fono + System.getProperty("line.separator")); // line separator = \n
+            archivoEscritura.write(codigo + "," + nombre + "," + fono + System.getProperty("line.separator")); // line separator = \n
 
             // Cerrar los objetos
             archivoEscritura.close();
